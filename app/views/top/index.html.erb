@@ -1,0 +1,9 @@
+<h1>Top#index</h1>
+<div id="canvas">
+  <% @blocks.each do |block| %>
+  <%= content_tag(:div, nil, class: "block",
+       data: { :"block-id" => block.id },
+      style: "left: #{block.x}px; top: #{block.y}px") %>
+  <% end %>
+</div>
+<p>Find me in app/views/top/index.html.erb</p>
